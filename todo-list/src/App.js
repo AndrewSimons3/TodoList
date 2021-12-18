@@ -32,12 +32,16 @@ function App() {
     });
   };
 
+  const deleteTodoHandler = () => {
+    console.log('delete todo')
+  }
+
 	return (
 		<div className='App'>
 			<div className='main'>
 				<Header />
 				<Input onAddTodo={addTodoHandler} />
-				<Todos todos={todos} />
+				<Todos todos={todos} onDeleteTodo={deleteTodoHandler} />
 			</div>
 		</div>
 	);
