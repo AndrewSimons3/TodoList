@@ -5,6 +5,9 @@ import cross from '../images/icon-cross.svg';
 
 const TodoItem = (props) => {
 
+  const deleteTodoHandler = () => {
+		props.onDeleteTodo(props.id);
+	};
 
   return (
 		<li className={classes.todoItem}>
@@ -12,7 +15,7 @@ const TodoItem = (props) => {
 				<img src={check} alt=''/>
 			</div>
 			<div className={classes.todo}>{props.todo}</div>
-			<div className={classes.cross} onClick={props.onDeleteTodo}>
+			<div className={classes.cross} onClick={deleteTodoHandler}>
 				<img src={cross} alt=''/>
 			</div>
 		</li>

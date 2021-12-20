@@ -5,36 +5,41 @@ import Todos from './components/Todos';
 import { useState } from 'react';
 
 function App() {
-	const [todos, setTodos] = useState([
-		{
-			id: 'td1',
-			todo: 'Wash the dishes',
-		},
-		{
-			id: 'td2',
-			todo: 'Walk the dog',
-		},
-		{
-			id: 'td3',
-			todo: 'Workout',
-		},
-		{
-			id: 'td4',
-			todo: 'Pay bills',
-		},
+  const [todos, setTodos] = useState([
+    {
+      id: 'td1',
+      todo: 'Wash the dishes',
+    },
+    {
+      id: 'td2',
+      todo: 'Walk the dog',
+    },
+    {
+      id: 'td3',
+      todo: 'Workout',
+    },
+    {
+      id: 'td4',
+      todo: 'Pay bills',
+    },
   ]);
   
   const addTodoHandler = enteredText => {
     setTodos(prevTodos => {
       const updatedTodos = [...prevTodos];
       updatedTodos.unshift({ todo: enteredText, id: Math.random().toString() });
+      
       return updatedTodos;
     });
   };
 
-  const deleteTodoHandler = () => {
-    console.log('delete todo')
-  }
+  const deleteTodoHandler = (id) => {
+    setTodos(prevTodos => {
+      const updatedTodos = prevTodos.filter(todo => todo.id !== id);
+      console.log(updatedTodos);
+      return updatedTodos;
+    });
+  };
 
 	return (
 		<div className='App'>
