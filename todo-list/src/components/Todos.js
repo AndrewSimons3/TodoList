@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../UI/Card';
 import TodoItem from './TodoItem';
 import classes from './Todos.module.css';
+import Footer from './Footer';
 
 
 
@@ -15,11 +16,12 @@ const Todos = props => {
 							key={todo.id}
 							id={todo.id}
 							todo={todo.todo}
-							onDeleteTodo={props.onDeleteTodo}
+              onDeleteTodo={props.onDeleteTodo}
 						/>
 					);
 				})}
-			</ul>
+      </ul>
+      <Footer />
 		</Card>
 	);
 };

@@ -1,0 +1,11 @@
+.footerContainer {
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+span {
+  margin: 5px;
+}
