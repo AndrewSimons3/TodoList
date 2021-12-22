@@ -17,33 +17,27 @@ body {
 }
 
 .main {
-	width: 50%;
+	width: 60%;
 	padding-top: 60px;
 }
 
-.status {
-	border-bottom: 1px solid hsl(233, 11%, 84%);
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-  justify-content: space-around;
-	padding: 20px;
-	font-size: 18px;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	border-radius: 5px;
-	background-color: white;
-  margin-top: 20px;
-}
+
+
+/* @media only screen and (max-width: 700px) {
+	.main {
+		width: 70%;
+	}
+} */
 
 @media only screen and (max-width: 700px) {
 	.main {
-		width: 60%;
+		width: 90%;
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
 	.main {
-		width: 90%;
+		width: 80%;
 	}
 }
 

@@ -1,0 +1,51 @@
+.status {
+	border-bottom: 1px solid hsl(233, 11%, 84%);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  justify-content: space-around;
+	padding: 20px;
+	font-size: 18px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5px;
+	background-color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  color:hsl(236, 9%, 61%);
+}
+
+.statusDark {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(236, 33%, 92%);
+  border-bottom: none;
+}
+
+
+.all {
+  background: linear-gradient(#57ddff,#c058f3);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.active:hover {
+  color: #000;
+  transition: .3s ease-in;
+}
+
+.completed:hover {
+  color: #000;
+  transition: .3s ease-in;
+}
+
+.darkHover:hover {
+  color: hsl(236, 33%, 92%);
+  transition: .3s ease-in;
+}
+
+@media screen and (min-width: 770px) {
+  .status {
+    display: none !important;
+  }
+}
+
+

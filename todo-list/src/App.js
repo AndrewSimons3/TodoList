@@ -2,6 +2,7 @@ import classes from './App.module.css';
 import Input from './components/Input';
 import Header from './components/Header';
 import Todos from './components/Todos';
+import Status from './components/Status';
 import { useState } from 'react';
 
 function App() {
@@ -62,23 +63,7 @@ function App() {
 					display={toggleDisplay}
 				/>
 
-				<div className={classes.status}>
-					<span className={classes.all}>All</span>
-					<span
-						className={`${classes.active} ${
-							toggleDisplay ? classes.darkHover : ''
-						}`}
-					>
-						Active
-					</span>
-					<span
-						className={`${classes.completed} ${
-							toggleDisplay ? classes.darkHover : ''
-						}`}
-					>
-						Completed
-					</span>
-				</div>
+        <Status display={toggleDisplay}/>
 			</div>
 		</div>
 	);
