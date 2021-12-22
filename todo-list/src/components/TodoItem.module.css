@@ -7,6 +7,13 @@
  font-size: 18px;
 }
 
+.todoItem:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 0px 7px 0px hsl(235, 19%, 35%);
+  border-color: hsl(236, 9%, 61%);
+  z-index: 10;
+}
+
 .check {
   height: 18px;
   width: 18px;

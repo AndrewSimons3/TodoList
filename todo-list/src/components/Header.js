@@ -5,18 +5,21 @@ import moon from '../images/icon-moon.svg'
 
 const Header = props => {
 
-  
-  // const toggleDarkMode = () => {
-  //   setToggleDark(value => !value);
-  // }
-
   return (
-    <div className={classes.header}>
-      <h1 className={classes['header-title']}>TODO</h1>
-      <img className={classes.moon} src={moon}  />
-      {/* <img className={classes.sun} src={sun} /> */}
-    </div>
-  )
+		<div className={classes.header}>
+			<h1 className={classes['header-title']}>TODO</h1>
+		{props.display && <img
+				className={classes.moon}
+				src={moon}
+				onClick={props.onToggleDisplay}
+			/>}
+      {!props.display && <img
+        className={classes.sun}
+        src={sun}
+        onClick={props.onToggleDisplay} 
+      />}
+		</div>
+	);
 }
 
 export default Header;

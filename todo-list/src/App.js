@@ -24,6 +24,7 @@ function App() {
 		},
   ]);
   
+  const [toggleDisplay, setToggleDisplay] = useState(false);
   
 
 	
@@ -43,13 +44,18 @@ function App() {
 			console.log(updatedTodos);
 			return updatedTodos;
 		});
-	};
+  };
+  
+  const toggleDisplayHandler = () => {
+    setToggleDisplay(value => !value);
+    console.log('working')
+  }
 
 
 	return (
 		<div className='App'>
 			<div className='main'>
-				<Header />
+        <Header display={toggleDisplay} onToggleDisplay={toggleDisplayHandler}/>
 				<Input onAddTodo={addTodoHandler} />
 				<Todos
 					todos={todos}
