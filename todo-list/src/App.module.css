@@ -2,13 +2,18 @@ body {
   font-family: 'Josefin Sans'
 }
 
-.App {
+.app {
   background-image: url(./images/bg-desktop-light.jpg);
   font-family: 'Josefin Sans';
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.darkBg {
+  background-image: url('./images/bg-desktop-dark.jpg');
+  background-color: hsl(235, 21%, 11%);
 }
 
 .main {

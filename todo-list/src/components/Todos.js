@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 const Todos = props => {
 	return (
-		<Card>
+		<Card toggleDisplay={props.display}>
 			<ul className={classes.items}>
 				{props.todos.map((todo) => {
 					return (
@@ -17,6 +17,7 @@ const Todos = props => {
 							id={todo.id}
 							todo={todo.todo}
               onDeleteTodo={props.onDeleteTodo}
+              toggleDisplay={props.display}
 						/>
 					);
 				})}

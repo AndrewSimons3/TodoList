@@ -17,7 +17,7 @@ const TodoItem = (props) => {
 
 	return (
 		<React.Fragment>
-			<li className={classes.todoItem}>
+			<li className={`${classes.todoItem} ${props.toggleDisplay ? classes.todoItemDark : ''}`}>
         <div className={`${classes.check} ${isComplete ? classes.checkComplete : ''}`} onClick={toggleTodoHandler}>
 					<img src={check} alt='' />
 				</div>

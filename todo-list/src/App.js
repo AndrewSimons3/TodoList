@@ -1,4 +1,4 @@
-import './App.css';
+import classes from './App.module.css';
 import Input from './components/Input';
 import Header from './components/Header';
 import Todos from './components/Todos';
@@ -22,12 +22,9 @@ function App() {
 			id: 'td4',
 			todo: 'Pay bills',
 		},
-  ]);
-  
-  const [toggleDisplay, setToggleDisplay] = useState(false);
-  
+	]);
 
-	
+	const [toggleDisplay, setToggleDisplay] = useState(false);
 
 	const addTodoHandler = (enteredText) => {
 		setTodos((prevTodos) => {
@@ -44,23 +41,28 @@ function App() {
 			console.log(updatedTodos);
 			return updatedTodos;
 		});
-  };
-  
-  const toggleDisplayHandler = () => {
-    setToggleDisplay(value => !value);
-    console.log('working')
-  }
+	};
 
+	const toggleDisplayHandler = () => {
+		setToggleDisplay((value) => !value);
+		console.log('working');
+	};
 
 	return (
-		<div className='App'>
-			<div className='main'>
-        <Header display={toggleDisplay} onToggleDisplay={toggleDisplayHandler}/>
-				<Input onAddTodo={addTodoHandler} />
-				<Todos
-					todos={todos}
-					onDeleteTodo={deleteTodoHandler}
+		<div className={`${classes.app} ${toggleDisplay ? classes.darkBg : ''}`}>
+			<div className={classes.main}>
+				<Header
+					display={toggleDisplay}
+					onToggleDisplay={toggleDisplayHandler}
 				/>
+        <Input
+          onAddTodo={addTodoHandler}
+          display={toggleDisplay} />
+        <Todos
+          todos={todos}
+          onDeleteTodo={deleteTodoHandler} 
+          display={toggleDisplay}
+          />
 			</div>
 		</div>
 	);

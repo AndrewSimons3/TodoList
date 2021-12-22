@@ -21,7 +21,7 @@ const Input = props => {
 		<div className={classes['input-container']}>
 			<form onSubmit={formSubmitHandler}>
 				<input
-					className={classes.input}
+					className={`${classes.input} ${props.display ? classes.inputDark : ''}`}
 					type='text'
 					id='todo'
 					placeholder='Create a new todo...'
