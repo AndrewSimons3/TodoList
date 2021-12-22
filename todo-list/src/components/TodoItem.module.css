@@ -8,8 +8,8 @@
 }
 
 .check {
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   border-radius: 25px;
   border: 1px solid hsl(236, 9%, 61%);
   margin-right: 20px;
@@ -19,7 +19,7 @@
 
 .check:hover{
   border: 1px solid #c058f3;
-  transition: .5s ease-in;
+  transition: .3s ease-in;
 }
 
 .cross {
@@ -31,14 +31,18 @@
 }
 
 .checkComplete {
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   border-radius: 25px;
-  /* border: 2px solid hsl(236, 9%, 61%); */
+  border: none;
   margin-right: 20px;
   cursor: pointer;
   text-align: center;
   background: linear-gradient(#57ddff,#c058f3);
+}
+
+.checkComplete:hover {
+  border: none;
 }
 
 .todoComplete {

@@ -14,38 +14,18 @@ const TodoItem = (props) => {
 		setIsComplete(value => !value);
 	};
 
-  const incompleteClasses = (
-    <React.Fragment>
-		<li className={classes.todoItem}>
-			<div className={classes.check} onClick={toggleTodoHandler}>
-				<img src={check} alt='' />
-			</div>
-			<div className={classes.todo}>{props.todo}</div>
-			<div className={classes.cross} onClick={deleteTodoHandler}>
-				<img src={cross} alt='' />
-			</div>
-		</li>
-    </React.Fragment>
-	);
 
-	const completeClasses = (
+	return (
 		<React.Fragment>
 			<li className={classes.todoItem}>
-				<div className={classes.checkComplete} onClick={toggleTodoHandler}>
+        <div className={`${classes.check} ${isComplete ? classes.checkComplete : ''}`} onClick={toggleTodoHandler}>
 					<img src={check} alt='' />
 				</div>
-				<div className={classes.todoComplete}>{props.todo}</div>
+				<div className={`${classes.todo} ${isComplete ? classes.todoComplete : ''}`}>{props.todo}</div>
 				<div className={classes.cross} onClick={deleteTodoHandler}>
 					<img src={cross} alt='' />
 				</div>
 			</li>
-		</React.Fragment>
-	);
-
-	return (
-		<React.Fragment>
-			{!isComplete && incompleteClasses }
-			{isComplete && completeClasses }
 		</React.Fragment>
 	);
 };

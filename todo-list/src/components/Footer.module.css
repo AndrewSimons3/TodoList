@@ -4,8 +4,39 @@
   flex-direction: row;
   justify-content: space-around;
   font-size: 14px;
+  color: hsl(236, 9%, 61%);
+  
 }
 
 span {
   margin: 5px;
+}
+
+.status {
+  cursor: pointer;
+}
+
+.clear {
+  cursor: pointer;
+}
+
+.clear:hover {
+  color: #000;
+  transition: .3s ease-in;
+}
+
+.all {
+  background: linear-gradient(#57ddff,#c058f3);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.active:hover {
+  color: #000;
+  transition: .3s ease-in;
+}
+
+.completed:hover {
+  color: #000;
+  transition: .3s ease-in;
 }

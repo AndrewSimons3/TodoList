@@ -6,9 +6,9 @@ const Footer = () => {
     <div className={classes.footerContainer}>
       <div className={classes.items}>5 items left</div>
       <div className={classes.status}>
-        <span>All</span>
-        <span>Active</span>
-        <span>Completed</span>
+        <span className={classes.all}>All</span>
+        <span className={classes.active}>Active</span>
+        <span className={classes.completed}>Completed</span>
       </div>
       <div className={classes.clear}>
         Clear Completed
