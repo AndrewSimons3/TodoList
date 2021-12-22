@@ -14,4 +14,9 @@
 
 .inputDark {
   background-color: #25273c;
+  color: hsl(236, 33%, 92%);
+}
+
+.input:focus {
+  outline: none;
 }

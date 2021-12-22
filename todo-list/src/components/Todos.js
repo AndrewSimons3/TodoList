@@ -22,7 +22,7 @@ const Todos = props => {
 					);
 				})}
       </ul>
-      <Footer />
+      <Footer toggleDisplay={props.display}/>
 		</Card>
 	);
 };

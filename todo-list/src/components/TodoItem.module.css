@@ -7,15 +7,22 @@
  font-size: 18px;
 }
 
-.todoItemDark {
-  border-bottom: 1px solid hsl(233, 14%, 35%);
-  color: hsl(236, 33%, 92%);
-}
-
 .todoItem:hover {
   transform: translateY(-1.5px);
   box-shadow: 0 0px 7px 0px hsl(235, 19%, 35%);
   border-color: hsl(236, 9%, 61%);
+  z-index: 10;
+}
+
+.todoItemDark {
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  color: hsl(236, 33%, 92%);
+}
+
+.todoItemDark:hover {
+  transform: translateY(-.5px);
+  box-shadow: 0 0px 7px 0px hsl(234, 12%, 47%);
+  border-color: hsl(234, 11%, 52%);
   z-index: 10;
 }
 
@@ -27,6 +34,7 @@
   margin-right: 20px;
   cursor: pointer;
   text-align: center;
+  
 }
 
 .check:hover{
