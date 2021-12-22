@@ -55,14 +55,30 @@ function App() {
 					display={toggleDisplay}
 					onToggleDisplay={toggleDisplayHandler}
 				/>
-        <Input
-          onAddTodo={addTodoHandler}
-          display={toggleDisplay} />
-        <Todos
-          todos={todos}
-          onDeleteTodo={deleteTodoHandler} 
-          display={toggleDisplay}
-          />
+				<Input onAddTodo={addTodoHandler} display={toggleDisplay} />
+				<Todos
+					todos={todos}
+					onDeleteTodo={deleteTodoHandler}
+					display={toggleDisplay}
+				/>
+
+				<div className={classes.status}>
+					<span className={classes.all}>All</span>
+					<span
+						className={`${classes.active} ${
+							toggleDisplay ? classes.darkHover : ''
+						}`}
+					>
+						Active
+					</span>
+					<span
+						className={`${classes.completed} ${
+							toggleDisplay ? classes.darkHover : ''
+						}`}
+					>
+						Completed
+					</span>
+				</div>
 			</div>
 		</div>
 	);

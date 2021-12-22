@@ -16,13 +16,14 @@ const Todos = props => {
 							key={todo.id}
 							id={todo.id}
 							todo={todo.todo}
-              onDeleteTodo={props.onDeleteTodo}
-              toggleDisplay={props.display}
+							onDeleteTodo={props.onDeleteTodo}
+							toggleDisplay={props.display}
 						/>
 					);
 				})}
-      </ul>
-      <Footer toggleDisplay={props.display}/>
+			</ul>
+			<Footer toggleDisplay={props.display} />
+			
 		</Card>
 	);
 };
