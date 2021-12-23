@@ -25,7 +25,8 @@ function App() {
 		},
 	]);
 
-	const [toggleDisplay, setToggleDisplay] = useState(false);
+  const [toggleDisplay, setToggleDisplay] = useState(false);
+  
 
 	const addTodoHandler = (enteredText) => {
 		setTodos((prevTodos) => {

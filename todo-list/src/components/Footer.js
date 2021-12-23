@@ -4,7 +4,7 @@ import classes from './Footer.module.css';
 const Footer = props => {
   return (
 		<div className={classes.footerContainer}>
-			<div className={classes.items}>5 items left</div>
+			<div className={classes.items}>{props.todos.length} items left</div>
 			<div className={classes.status}>
 				<span className={classes.all}>All</span>
 				<span
