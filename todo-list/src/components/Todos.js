@@ -19,6 +19,8 @@ const Todos = props => {
 								todo={todo.todo}
 								onDeleteTodo={props.onDeleteTodo}
 								toggleDisplay={props.display}
+								onToggleTodo={props.onToggleTodo}
+								complete={props.complete}
 							/>
 						);
 					})}

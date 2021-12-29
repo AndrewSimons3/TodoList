@@ -25,6 +25,7 @@ function App() {
 		},
 	]);
 
+	const [isComplete, setIsComplete] = useState(false);
   const [toggleDisplay, setToggleDisplay] = useState(false);
   
 
@@ -50,6 +51,12 @@ function App() {
 		console.log('working');
 	};
 
+	const toggleTodoHandler = (id) => {
+		console.log(id);
+		setIsComplete((id) => !id);
+	};
+
+
 	return (
 		<div className={`${classes.app} ${toggleDisplay ? classes.darkBg : ''}`}>
 			<div className={classes.main}>
@@ -62,6 +69,8 @@ function App() {
 					todos={todos}
 					onDeleteTodo={deleteTodoHandler}
 					display={toggleDisplay}
+					onToggleTodo={toggleTodoHandler}
+					complete={isComplete}
 				/>
 
         <Status display={toggleDisplay}/>
