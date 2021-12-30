@@ -11,7 +11,7 @@ const TodoItem = (props) => {
 	};
 
 	const completeTodoHandler = () => {
-		props.onToggleTodo(props.id)
+		props.onToggleComplete(props.id)
 	};
 
 	

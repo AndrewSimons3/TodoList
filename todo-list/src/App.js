@@ -51,9 +51,8 @@ function App() {
 		console.log('working');
 	};
 
-	const toggleTodoHandler = (id) => {
-		console.log(id);
-		setIsComplete((id) => !id);
+	const toggleCompleteHandler = (id) => {
+		
 	};
 
 
@@ -69,7 +68,7 @@ function App() {
 					todos={todos}
 					onDeleteTodo={deleteTodoHandler}
 					display={toggleDisplay}
-					onToggleTodo={toggleTodoHandler}
+					onToggleComplete={toggleCompleteHandler}
 					complete={isComplete}
 				/>
 
