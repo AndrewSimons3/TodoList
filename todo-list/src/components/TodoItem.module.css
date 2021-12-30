@@ -20,10 +20,9 @@
 }
 
 .todoItemDark:hover {
-  transform: translateY(-.5px);
-  box-shadow: 0 0px 7px 0px hsl(234, 12%, 47%);
-  border-color: hsl(234, 11%, 52%);
-  z-index: 10;
+  	transform: translateY(-2px);
+	box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+	border-color: hsl(235, 24%, 19%);
 }
 
 .check {
